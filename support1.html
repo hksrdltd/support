@@ -1,0 +1,18 @@
+<html>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6666fa3d82b7ac0941f8cb35' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        }).then(()=>{
+          window.voiceflow.chat.open();
+        }, 1000)
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</html>
