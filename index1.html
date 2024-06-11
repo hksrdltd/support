@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website with Voiceflow</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #website-frame {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+
+    #voiceflow-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <!-- Embed the full page website -->
+  <iframe id="website-frame" src="https://your-website.com"></iframe>
+
+  <!-- Voiceflow integration -->
+  <div id="voiceflow-container"></div>
+
+  <!-- Load the Voiceflow SDK -->
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6666fa3d82b7ac0941f8cb35' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
